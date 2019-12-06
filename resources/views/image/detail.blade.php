@@ -25,24 +25,24 @@
                     
                     <div class="data-user">
                         {{ $image->user->nick }}
-                    </div>
-
-                    @if(Auth::user() && Auth::user()->id == $image->user->id)
-                    <div class="actions"> 
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href=" {{ route('image.edit', ['id' => $image->id]) }} ">
-                                Editar
+                        @if(Auth::user() && Auth::user()->id == $image->user->id)
+                        <div class="actions"> 
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
                             </a>
 
-                            <a class="dropdown-item" href=" {{ route('image.delete', ['id' => $image->id]) }} ">
-                                Eliminar 
-                            </a>
-                        </div>   
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href=" {{ route('image.edit', ['id' => $image->id]) }} ">
+                                    Editar
+                                </a>
+
+                                <a class="dropdown-item" href=" {{ route('image.delete', ['id' => $image->id]) }} ">
+                                    Eliminar 
+                                </a>
+                            </div>   
+                        </div>
+                        @endif  
                     </div>
-                    @endif  
+
                 </div>
 
                 <div class="card-body">
