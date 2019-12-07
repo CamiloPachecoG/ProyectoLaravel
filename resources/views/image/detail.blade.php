@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-md-5">
-            @include('includes.message')
+            <!--@include('includes.message')-->
 
                 <div class="pub_image pub_image_detail">
                     <div class="card-header">
@@ -92,16 +92,16 @@
                             <form method="POST" action="{{ route('comment.save') }}">
                                 @csrf
 
-                                <input type="hidden" name="imagen_id" value=" {{$image->id}} ">
+                                <input type="hidden" name="image_id" value="{{$image->id}}">
                                 <p>
-                                    <textarea class="form-control {{ $errors->has('content') ? 'is-invalid' : '' }}" name="content"></textarea>
+                                    <textarea class="form-control" name="content"></textarea>
                                     @if($errors->has('content'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('content') }}</strong>
                                         </span>
                                     @endif
                                 </p>
-                                <input type="submit" class="btn btn-primary" value="Enviar">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
                             </form>
 
                         </div>

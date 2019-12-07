@@ -21,7 +21,7 @@ class CommentController extends Controller
          
         //Recoger datos
         $user = \Auth::user();
-        $image_id = $request->input('image.id');
+        $image_id = $request->input('image_id');
         $content = $request->input('content');
 
         //Asigno valor al objeto
@@ -35,7 +35,7 @@ class CommentController extends Controller
 
         //Redirección
         return redirect()->route('image.detail', ['id' => $image_id])
-                         ->whith([
+                         ->with([
                             'message'=> 'Comentario publicado'
                          ]);
 
