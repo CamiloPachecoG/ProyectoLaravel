@@ -1,4 +1,3 @@
-<p align="center">![Captura de Pantalla 2020-02-08 a la(s) 12 40 04](https://user-images.githubusercontent.com/58574070/74088146-b49a6a80-4a71-11ea-92e2-c11de6e44309.png)</p>
 
 ## Clon Instagram
 
