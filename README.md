@@ -1,7 +1,7 @@
 
 ## Clon Instagram
 
-Primer proyecto utilizando Laravel 6
+Primer proyecto utilizando Laravel 5.6
 
 
 ## ScreenShots
